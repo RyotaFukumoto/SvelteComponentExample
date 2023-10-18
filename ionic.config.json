@@ -1,0 +1,7 @@
+{
+  "name": "SvelteComponentExample",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
