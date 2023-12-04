@@ -43,3 +43,9 @@
 
 <slot></slot> <!-- default slot -->
 <slot name="footer"></slot> <!-- named slot: footer -->
+
+<style>
+  button:hover {
+    background-color: red;
+  }
+</style>
