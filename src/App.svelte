@@ -32,6 +32,17 @@
     age = 20;  // ageを更新
     dispatch('clicked', { message: 'Hello from MyComponent' });
   }
+  const input = () => {
+    const inputElement = document.querySelector('input');
+    if (inputElement) {
+      inputElement.addEventListener('keyup', (event: Event) => {
+        const target = event.target as HTMLInputElement;
+        if (target) {
+          localStorage.setItem('username', target.value || '');
+        }
+      });
+    }
+}
 </script>
 
 <h1>
@@ -40,6 +51,8 @@
 <button on:click={handleClick}>
   Change Name to "Svelte User"
 </button>
+<input type="text" id="input" bind:value={username} on:change={input} />
+
 
 <slot></slot> <!-- default slot -->
 <slot name="footer"></slot> <!-- named slot: footer -->
